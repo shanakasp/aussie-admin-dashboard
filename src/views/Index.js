@@ -1,49 +1,32 @@
-/*!
-
-=========================================================
-* Argon Dashboard React - v1.2.4
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-react
-* Copyright 2024 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import { useState } from "react";
 // node.js library that concatenates classes (strings)
 import classnames from "classnames";
 // javascipt plugin for creating charts
 import Chart from "chart.js";
 // react plugin used to create charts
-import { Line, Bar } from "react-chartjs-2";
+import { Bar, Line } from "react-chartjs-2";
 // reactstrap components
 import {
   Button,
   Card,
-  CardHeader,
   CardBody,
+  CardHeader,
+  Col,
+  Container,
+  Nav,
   NavItem,
   NavLink,
-  Nav,
   Progress,
-  Table,
-  Container,
   Row,
-  Col,
+  Table,
 } from "reactstrap";
 
 // core components
 import {
-  chartOptions,
-  parseOptions,
   chartExample1,
   chartExample2,
+  chartOptions,
+  parseOptions,
 } from "variables/charts.js";
 
 import Header from "components/Headers/Header.js";
@@ -150,7 +133,7 @@ const Index = (props) => {
               <CardHeader className="border-0">
                 <Row className="align-items-center">
                   <div className="col">
-                    <h3 className="mb-0">Page visits</h3>
+                    <h3 className="mb-0">Stock Summary</h3>
                   </div>
                   <div className="col text-right">
                     <Button
@@ -167,10 +150,10 @@ const Index = (props) => {
               <Table className="align-items-center table-flush" responsive>
                 <thead className="thead-light">
                   <tr>
-                    <th scope="col">Page name</th>
-                    <th scope="col">Visitors</th>
-                    <th scope="col">Unique users</th>
-                    <th scope="col">Bounce rate</th>
+                    <th scope="col">Store name</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Rate</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -250,7 +233,7 @@ const Index = (props) => {
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">Facebook</th>
+                    <th scope="row">Audi</th>
                     <td>1,480</td>
                     <td>
                       <div className="d-flex align-items-center">
@@ -266,7 +249,7 @@ const Index = (props) => {
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">Facebook</th>
+                    <th scope="row">BMW</th>
                     <td>5,480</td>
                     <td>
                       <div className="d-flex align-items-center">
@@ -282,7 +265,7 @@ const Index = (props) => {
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">Google</th>
+                    <th scope="row">VW</th>
                     <td>4,807</td>
                     <td>
                       <div className="d-flex align-items-center">
