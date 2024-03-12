@@ -1,4 +1,5 @@
 import Index from "views/Index.js";
+import Go from "views/examples/Go";
 import Login from "views/examples/Login.js";
 import Maps from "views/examples/Maps.js";
 import Profile from "views/examples/Profile.js";
@@ -48,6 +49,13 @@ var routes = [
     icon: "ni ni-circle-08 text-pink",
     component: <Register />,
     layout: "/auth",
+  },
+  {
+    path: "/go",
+    name: "Go",
+    icon: "ni ni-circle-08 text-pink",
+    component: <Go />,
+    layout: "/admin",
   },
 ];
 export default routes;
